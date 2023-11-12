@@ -17,7 +17,7 @@ data class Datum(
 
 data class CoinInfo(
     @SerializedName("Id")
-    // @Expose
+    @Expose
     val id: String,
 
     @SerializedName("Name")
