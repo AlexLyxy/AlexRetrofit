@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id ("kotlin-parcelize")
 }
 
 android {
@@ -33,9 +34,15 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.9.0"))
+    implementation ("androidx.activity:activity-ktx:1.8.0")
+
 
     implementation ("com.sealwu.jsontokotlin:library:3.7.4")
 
@@ -54,6 +61,21 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    //android architecture components dependencies
+    //ViewModel
+    //https://developer.android.com/jetpack/androidx/releases/lifecycle#kts
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    // Saved state module for ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2")
+    // Annotation processor
+    //kapt("androidx.lifecycle:lifecycle-compiler:2.6.1")
+    // alternately - if using Java8, use the following instead of lifecycle-compiler
+    implementation("androidx.lifecycle:lifecycle-common-java8:2.6.2")
+    // optional - ReactiveStreams support for LiveData
+    implementation("androidx.lifecycle:lifecycle-reactivestreams-ktx:2.6.2")
     
     implementation("com.squareup.picasso:picasso:2.71828")
 }

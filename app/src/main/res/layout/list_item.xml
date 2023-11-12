@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvPrId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Id"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPrTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPrTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrId" />
+
+    <TextView
+        android:id="@+id/tvPrDescr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrTitle" />
+
+    <TextView
+        android:id="@+id/tvPrPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrDescr" />
+
+    <TextView
+        android:id="@+id/tvDogStat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrPrice" />
+
+    <ImageView
+        android:id="@+id/ivDoggOne"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDogStat"
+        app:srcCompat="@drawable/candles" />
+
+    <ImageView
+        android:id="@+id/ivDoggTwo"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDoggOne"
+        app:srcCompat="@drawable/green" />
+
+    <ImageView
+        android:id="@+id/ivDoggThree"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDoggTwo"
+        app:srcCompat="@drawable/moon" />
+
+    <ImageView
+        android:id="@+id/ivDoggFour"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDoggThree"
+        app:srcCompat="@drawable/mountains" />
+
+    <ImageView
+        android:id="@+id/ivDoggFive"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDoggFour"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/tvCoinName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CoinName"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivDoggFive" />
+
+    <TextView
+        android:id="@+id/tvCoinFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CoinFullName"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCoinName" />
+
+    <TextView
+        android:id="@+id/tvDateZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DateZero"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCoinFullName" />
+
+    <TextView
+        android:id="@+id/tvDateOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DateOne"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateZero" />
+
+    <TextView
+        android:id="@+id/tvDateTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DateTwo"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateOne" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
