@@ -23,24 +23,24 @@ class TroikaAdapter : ListAdapter<TroikaModel, TroikaAdapter.Holder>(Comparator(
             tvPrDescr.text = item.description
             tvPrPrice.text = item.price.toString()
 
-            //DOGS:
-            tvDogStat.text = item.status
-
-            //DOGSALL:
-            Picasso.get().load(item.dogOne).into(ivDoggOne)
-            Picasso.get().load(item.dogTwo).into(ivDoggTwo)
-            Picasso.get().load(item.dogThree).into(ivDoggThree)
-            Picasso.get().load(item.dogFour).into(ivDoggFour)
-            Picasso.get().load(item.dogFive).into(ivDoggFive)
-
-            //COIN:
-            tvCoinName.text = item.name
-            tvCoinFullName.text = item.fullName
-
-            //WEATHER:
-            tvDateZero.text = item.dateZero
-            tvDateOne.text = item.dateOne
-            tvDateTwo.text = item.dateTwo
+//            //DOGS:
+//            tvDogStat.text = item.status
+//
+//            //DOGSALL:
+//            Picasso.get().load(item.dogOne).into(ivDoggOne)
+//            Picasso.get().load(item.dogTwo).into(ivDoggTwo)
+//            Picasso.get().load(item.dogThree).into(ivDoggThree)
+//            Picasso.get().load(item.dogFour).into(ivDoggFour)
+//            Picasso.get().load(item.dogFive).into(ivDoggFive)
+//
+//            //COIN:
+//            tvCoinName.text = item.name
+//            tvCoinFullName.text = item.fullName
+//
+//            //WEATHER:
+//            tvDateZero.text = item.dateZero
+//            tvDateOne.text = item.dateOne
+//            tvDateTwo.text = item.dateTwo
         }
     }
 

@@ -1,5 +1,6 @@
 package com.alexlyxy.alexretrofit.domain
 
+import android.util.Log
 import com.alexlyxy.alexretrofit.data.RepositoryImpl
 import com.alexlyxy.alexretrofit.domain.Product
 import retrofit2.http.GET
@@ -13,9 +14,10 @@ import retrofit2.http.Path
 
 //class GetProductUseCase (private val repository: Repository) {
 
-class GetProductUseCase(private val repository: RepositoryImpl){
+class GetProductUseCase(private val repository: Repository) {
 
-    suspend fun getProduct(coin: RepositoryImpl) {
-        repository.getProduct(product)
+    suspend fun getProductById(id: Int) {
+       val product =  repository.getProductById(id)
+        Log.d("MyLog", "Product: $product")
     }
 }

@@ -1,16 +1,33 @@
 package com.alexlyxy.alexretrofit.data
 
-import com.alexlyxy.alexretrofit.domain.Coin
 import com.alexlyxy.alexretrofit.domain.Product
 import com.alexlyxy.alexretrofit.domain.Repository
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface RepositoryImpl: Repository {
+interface RepositoryImpl : Repository {
 
-object RepositoryImpl : Repository {
+    //object RepositoryImpl : Repository {
     //override suspend fun getCoin(apiKey: String, limit: Int, tSym: String): Coin {
-    override suspend fun getProduct(product: Product): Product {
+    //override suspend fun getProductById(id: Int): Product {
+
+    @GET("products/{id}")
+    override suspend fun getProductById(@Path("id") id: Int): Product
+}
+
+        //( id: Int, title: String, description: String, price: Int, discountPercentage: Float,
+        // rating: Float, stock: Int, brand: String, category: String, thumbnail: String, images: List<String>)
+
+//            override fun getShopItem(shopItemId: Int): ShopItem {
+//                return shopList.find {
+//                    it.id == shopItemId
+//                } ?: throw RuntimeException("Element with id $shopItemId not found")
+//            }
+//
+//            override fun getShopList(): LiveData<List<ShopItem>> {
+//                return shopListLD
+//            }
 
 
         //interface ProductApi {
@@ -18,10 +35,9 @@ object RepositoryImpl : Repository {
 //    suspend fun getProductById(@Path("id") id: Int): Product
 //}
 
-    }
 
-}
-    }
+
+
 
 
 // override suspend fun getCoin(coin: Coin) {

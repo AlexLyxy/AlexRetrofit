@@ -5,7 +5,9 @@ import retrofit2.http.Query
 
 interface Repository {
 
-    suspend fun Product(product: Product)
+    suspend fun getProductById(id: Int): Product
+
+    }
 //    @GET("data/top/totalvolfull")
 //    suspend fun getCoin(
 //        @Query(QUERY_PARAM_API_KEY) apiKey: String =
@@ -20,4 +22,3 @@ interface Repository {
 //        private const val QUERY_PARAM_TO_SYMBOL = "tsym"
 //        private const val CURRENCY = "USD"
 //    }
-}
