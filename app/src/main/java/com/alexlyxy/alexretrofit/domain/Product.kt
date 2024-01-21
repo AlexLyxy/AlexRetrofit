@@ -1,4 +1,4 @@
-package com.alexlyxy.alexretrofit.retrofit
+package com.alexlyxy.alexretrofit.domain
 
 data class Product(
     val id: Int,

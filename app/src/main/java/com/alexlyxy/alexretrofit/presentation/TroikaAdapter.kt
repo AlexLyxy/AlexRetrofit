@@ -1,11 +1,8 @@
-package com.alexlyxy.alexretrofit.adapters
+package com.alexlyxy.alexretrofit.presentation
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.alexlyxy.alexretrofit.R
@@ -47,15 +44,15 @@ class TroikaAdapter : ListAdapter<TroikaModel, TroikaAdapter.Holder>(Comparator(
         }
     }
 
-    class Comparator : DiffUtil.ItemCallback<TroikaModel>() {
-        override fun areItemsTheSame(oldItem: TroikaModel, newItem: TroikaModel): Boolean {
-            return oldItem == newItem
-        }
-
-        override fun areContentsTheSame(oldItem: TroikaModel, newItem: TroikaModel): Boolean {
-            return oldItem == newItem
-        }
-    }
+//    class Comparator : DiffUtil.ItemCallback<TroikaModel>() {
+//        override fun areItemsTheSame(oldItem: TroikaModel, newItem: TroikaModel): Boolean {
+//            return oldItem == newItem
+//        }
+//
+//        override fun areContentsTheSame(oldItem: TroikaModel, newItem: TroikaModel): Boolean {
+//            return oldItem == newItem
+//        }
+//    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)

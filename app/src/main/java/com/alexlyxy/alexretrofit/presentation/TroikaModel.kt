@@ -1,4 +1,4 @@
-package com.alexlyxy.alexretrofit.adapters
+package com.alexlyxy.alexretrofit.presentation
 
 data class TroikaModel(
 

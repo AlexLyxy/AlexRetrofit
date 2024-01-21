@@ -1,7 +1,6 @@
-package com.alexlyxy.alexretrofit.retrofit
+package com.alexlyxy.alexretrofit.domain
 
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface WeatherApi {

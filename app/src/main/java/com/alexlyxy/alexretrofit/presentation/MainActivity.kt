@@ -1,18 +1,18 @@
-package com.alexlyxy.alexretrofit
+package com.alexlyxy.alexretrofit.presentation
 
+//import com.alexlyxy.alexretrofit.domain.CoinApi
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.alexlyxy.alexretrofit.adapters.TroikaAdapter
-import com.alexlyxy.alexretrofit.adapters.TroikaModel
+import com.alexlyxy.alexretrofit.data.RepositoryImpl
 import com.alexlyxy.alexretrofit.databinding.ActivityMainBinding
-import com.alexlyxy.alexretrofit.retrofit.CoinApi
-import com.alexlyxy.alexretrofit.retrofit.DogsAllApi
-import com.alexlyxy.alexretrofit.retrofit.DogsApi
-import com.alexlyxy.alexretrofit.retrofit.ProductApi
-import com.alexlyxy.alexretrofit.retrofit.WeatherApi
+import com.alexlyxy.alexretrofit.domain.CoinApi
+import com.alexlyxy.alexretrofit.domain.DogsAllApi
+import com.alexlyxy.alexretrofit.domain.DogsApi
+import com.alexlyxy.alexretrofit.domain.ProductApi
+import com.alexlyxy.alexretrofit.domain.WeatherApi
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,6 +27,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: TroikaAdapter
     private lateinit var binding: ActivityMainBinding
     private val model: MainViewModel by viewModels()
+
+
+    private val repository = RepositoryImpl
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,7 +75,9 @@ class MainActivity : AppCompatActivity() {
                     .baseUrl("https://min-api.cryptocompare.com/").client(client)
                     .addConverterFactory(GsonConverterFactory.create()).build()
 
-                val coinApi = retrofitCoin.create(CoinApi::class.java)
+               val coinApi = retrofitCoin.create(CoinApi::class.java)
+                //val getCoinUseCase = retrofitCoin.create(GetCoinUseCase::class.java)
+
 
                 val retrofitWeather = Retrofit.Builder()
                     .baseUrl("https://api.weatherapi.com/v1/forecast.json/").client(client)
@@ -90,6 +97,8 @@ class MainActivity : AppCompatActivity() {
                 )
 
                 val coin = coinApi.getCoin()
+                //val getCoinUseCase= GetCoinUseCase(repository)
+               // val coin = getCoinUseCase.getCoin(repository)
 
                 val weather = weatherApi.getWeather()
 
